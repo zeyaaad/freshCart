@@ -25,13 +25,13 @@ export default function Home() {
   let {setcountcart,setcountfav}=useContext(projectcontext)
   async function getgat() {
     setloading(true)
-    let {data}= await axios.get("https://route-ecommerce.onrender.com/api/v1/categories ")
+    let {data}= await axios.get("https://ecommerce.routemisr.com/api/v1/categories")
     setdataCatgorie(data.data)
   }
 
   async function getproducts() {
     setloading(true)
-    let {data} = await axios.get("https://route-ecommerce.onrender.com/api/v1/products")
+    let {data} = await axios.get("https://ecommerce.routemisr.com/api/v1/products")
     setdataproducts(data.data.slice(0,20))
   }
   useEffect(()=>{
